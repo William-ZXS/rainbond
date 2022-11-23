@@ -1,6 +1,9 @@
 name: Scheduled automatic packaging
 on:
-  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - GitHub
+      - GitLab
 
 jobs:
   build-ui:
